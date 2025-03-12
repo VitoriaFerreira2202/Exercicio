@@ -36,6 +36,7 @@
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.labelDescricao = new System.Windows.Forms.Label();
             this.lblResultado = new System.Windows.Forms.Label();
+            this.bntClique = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDescricao
@@ -105,18 +106,29 @@
             // 
             this.lblResultado.AutoSize = true;
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.lblResultado.Location = new System.Drawing.Point(276, 267);
+            this.lblResultado.Location = new System.Drawing.Point(391, 267);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(231, 39);
             this.lblResultado.TabIndex = 9;
             this.lblResultado.Text = "DESCRIÇÃO:";
-            this.lblResultado.Click += new System.EventHandler(this.lblResultado_Click);
+            // 
+            // bntClique
+            // 
+            this.bntClique.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.bntClique.Location = new System.Drawing.Point(268, 327);
+            this.bntClique.Name = "bntClique";
+            this.bntClique.Size = new System.Drawing.Size(221, 46);
+            this.bntClique.TabIndex = 10;
+            this.bntClique.Text = "CLIQUE  AQUI";
+            this.bntClique.UseVisualStyleBackColor = true;
+            this.bntClique.Click += new System.EventHandler(this.bntClique_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bntClique);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.labelDescricao);
@@ -143,6 +155,7 @@
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label labelDescricao;
         private System.Windows.Forms.Label lblResultado;
+        private System.Windows.Forms.Button bntClique;
     }
 }
 

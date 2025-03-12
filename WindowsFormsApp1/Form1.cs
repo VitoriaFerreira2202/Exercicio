@@ -1,4 +1,5 @@
-﻿using System.Reflection.Emit;
+﻿using System;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -18,12 +19,19 @@ namespace WindowsFormsApp1
             lblDescricao.Text = produto.ExibirDetalhes();
         }
 
-        private void lblResultado_Click(object sender, System.EventArgs e)
+        private void bntClique_Click(object sender, System.EventArgs e)
         {
-            var  nome =(txtNome.Text).Trim();
-            var preco= (txtPreco.Text).Trim();
+            //Button btnCLiquer = new Button();
+            //var nome = (txtNome.Text).Trim();
+            //var preco = (txtPreco.Text).Trim();
+            //var descricao = (txtDescricao.Text).Trim();
+            //lblResultado.Text = preco + nome + descricao;
+           
+            var nome = (txtNome.Text).Trim();
+            var preco = Convert.ToDouble(txtPreco.Text.Trim());
             var descricao = (txtDescricao.Text).Trim();
-             lblResultado.Text = preco + nome +  descricao;
+            var produto = new Produto(nome, preco, descricao);
+            lblResultado.Text = produto.ExibirDetalhes();
         }
     }
 }
