@@ -12,15 +12,20 @@ namespace WindowsFormsApp1
         public double Preco { get; set; }
         public string Descricao { get; set; }
 
-        public Produto(string nome)
-        {
-            Nome = nome;
-        }
+       
         public Produto(string nome, double preco, string descricao)
         {
             Nome = nome;
             Preco = preco;
             Descricao = descricao;
+        }
+
+        public string ExibirDetalhes()
+        {
+
+            return $"Nome: {Nome}\n Preço:{Preco:c}\n Descrição:{Descricao}";
+
+
         }
     }
 }
